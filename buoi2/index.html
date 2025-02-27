@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello world</title>
+  </head>
+  <body>
+    <!-- div chính là dạng block chiếm full màn hình -->
+    <!-- Danh sách -->
+    <div>
+      <h2>Danh sách lớp học</h2>
+      <ul>
+        <li>Hưng Lợi</li>
+        <li>Khánh Duy</li>
+        <li>Hiếu Nhân</li>
+      </ul>
+      <ol>
+        <li>Hưng Lợi</li>
+        <li>Khánh Duy</li>
+        <li>Hiếu Nhân</li>
+        <li>Hiếu Nhân</li>
+      </ol>
+    </div>
+
+    <!-- Form -->
+    <div>
+      <h3>SignUp</h3>
+      <form>
+        <!-- input fullname  -->
+        <div class="">
+          <!-- lable là nhãn dãn hoạt là tiêu đề của input -->
+          <label for="fullname">Họ và tên</label>
+          <!-- input là form để người dùng nhập dữ liệu -->
+          <!-- type -> text -> string , number-->
+          <input type="text" id="fullname" placeholder="Nhập tên của bạn" />
+        </div>
+        <br />
+        <!-- input phone -->
+        <div class="">
+          <label for="phone">Số điện thoại</label>
+          <input type="number" id="phone" />
+        </div>
+        <br />
+        <!-- username -->
+        <div class="">
+          <label for="username">Tên đăng nhập</label>
+          <input type="text" id="username" required />
+        </div>
+        <br />
+        <!-- password -->
+        <div class="">
+          <label for="password">Mật khẩu</label>
+          <input type="password" id="password" />
+        </div>
+        <br />
+        <!-- infomation  -->
+        <div class="">
+          <label for="abc">Giới thiệu</label>
+          <textarea name="" id="abc"></textarea>
+        </div>
+        <br />
+
+        <div class="">
+          <select name="" id="">
+            <option value="">Nam</option>
+            <option value="">Nữ</option>
+          </select>
+        </div>
+
+        <input type="checkbox" />
+
+        <input type="radio" />
+
+        <button type="submit">Đăng ký</button>
+      </form>
+    </div>
+  </body>
+</html>
