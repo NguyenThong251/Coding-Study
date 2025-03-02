@@ -34,9 +34,14 @@ body {
   line-height: 1;
   background-color: rgb(191, 191, 235);
   font-family: "Roboto", sans-serif;
+  position: relative;
 }
 
 .card-product{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
     width: 200px;
 background-color: white;
 border-radius: 5px;
@@ -49,9 +54,7 @@ box-shadow: 1px 1px 3px 0px #969696;
     border-radius: 8px;
     object-fit: cover;
 }
-.card-product-body{
-    margin-top: 10px;
-}
+
 .card-product-body h3 {
     font-size: 12px;
 }
@@ -95,6 +98,75 @@ font-size: 10px;
   flex-direction: column;
   gap: 8px;
 }
+.card-product-main{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.addToCart{
+  border-radius: 4px;
+  background: rgb(128, 94, 250);
+  width: 100%;
+  padding: 6px 0;
+  gap: 5px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ transition: all .2s linear;
+}
+.addToCart:hover{
+
+  background: rgb(128, 94, 250,0.5);
+  transition: all .2s linear;
+
+}
+.addToCart span,i{
+  font-size: 10px;
+  color: aliceblue;
+}
+.addToCart span{
+  font-weight: 500;
+}
+
+.card-product {
+  overflow: hidden; 
+}
+.card-product-header-image {
+  overflow: hidden; 
+  border-radius: 8px;
+}
+.card-product-header-image img{
+  transition: all .3s ease;
+}
+.card-product:hover  .card-product-header-image img{
+  transform: scale(1.1);
+}
+.saleOff span{
+  font-size: 8px;
+  color: aliceblue;
+  font-weight: 500;
+}
+.card-product-header{
+  position: relative;
+}
+.saleOff{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border-radius: 3px;
+  background: #252525;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 6px;
+}
+
+
+
+
+
+
+
 /* .flex{
   display: flex;
   gap: 5px;
