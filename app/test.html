@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid with Template Areas</title>
+    <style>
+      .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #f0f0f0;
+        display: grid;
+        grid-template-areas:
+          "upgrade typeface sign"
+          "phone logo sign"
+          "ideas logo bottle";
+        grid-gap: 20px; /* Khoảng cách giữa các ô */
+        grid-auto-rows: minmax(100px, auto); /* Chiều cao tối thiểu của hàng */
+      }
+
+      .item {
+        background-color: #fff;
+        border: 2px solid #ddd;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      /* Gán các khu vực cho từng item */
+      .item-1 {
+        grid-area: upgrade;
+        background-color: #e0f7fa;
+      }
+      .item-2 {
+        grid-area: typeface;
+        background-color: #c8e6c9;
+      }
+      .item-3 {
+        grid-area: sign;
+        background-color: #b2dfdb;
+      }
+      .item-4 {
+        grid-area: phone;
+        background-color: #ffecb3;
+      }
+      .item-5 {
+        grid-area: logo;
+        background-color: #dcedc8;
+      }
+      .item-6 {
+        grid-area: bottle;
+        background-color: #b3e5fc;
+      }
+      .item-7 {
+        grid-area: ideas;
+        background-color: #fff9c4;
+      }
+
+      /* Thêm nội dung giả lập */
+      .item-1 {
+        content: "Upgrade Discount $12.99";
+      }
+      .item-2 {
+        content: "Urbanist Typeface";
+      }
+      .item-3 {
+        content: "TechNexus Sign";
+      }
+      .item-4 {
+        content: "Phone Screen";
+      }
+      .item-5 {
+        content: "TechNexus Logo";
+      }
+      .item-6 {
+        content: "Water Bottle";
+      }
+      .item-7 {
+        content: "Connecting Ideas";
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item-1">Upgrade Discount $12.99</div>
+      <div class="item item-2">Urbanist Typeface</div>
+      <div class="item item-3">TechNexus Sign</div>
+      <div class="item item-4">Phone Screen</div>
+      <div class="item item-5">TechNexus Logo</div>
+      <div class="item item-6">Water Bottle</div>
+      <div class="item item-7">Connecting Ideas</div>
+    </div>
+  </body>
+</html>
