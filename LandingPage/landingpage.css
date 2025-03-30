@@ -1,0 +1,338 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+}
+button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}
+body {
+  min-height: 100vh;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --primary-color: #b88e2f;
+  --secondary-color: #fff3e3;
+  --error-color: #e97171;
+  --success-color: #2ec1ac;
+}
+.header {
+  padding: 30px 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.logo img {
+  width: 50px;
+  height: 32px;
+  object-fit: cover;
+}
+.logo h3 {
+  font-size: 34px;
+  font-weight: 700;
+}
+.nav ul {
+  display: flex;
+  gap: 75px;
+}
+.nav ul li {
+  font-size: 16px;
+  font-weight: 500;
+  list-style-type: none;
+  cursor: pointer;
+  transition: all 0.2 linear;
+}
+.nav ul li :hover {
+  transition: all 0.2s linear;
+}
+.user {
+  display: flex;
+  gap: 40px;
+}
+.user i {
+  font-size: 20px;
+  cursor: pointer;
+}
+.hero {
+  width: 100%;
+  height: 717px;
+}
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-content {
+  width: 643px;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 150px;
+}
+.hero-content-main {
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hero-content-main span {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+.hero-content-main h3 {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 65px;
+  color: var(--primary-color);
+}
+.hero-content-main p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.button {
+  margin-top: 30px;
+}
+.hero-content-main button {
+  padding: 25px 72px;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* buoi 8 */
+
+.container {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.section-room-main {
+  margin: 50px 0;
+}
+
+.section-room-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.section-room-top h3 {
+  font-size: 32px;
+  font-weight: 700;
+}
+.section-room-top span {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.section-room-bottom {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.room-item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.room-image {
+  height: 480px;
+}
+.room-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.room-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+.product-main {
+  margin: 50px 0;
+}
+
+.product-main h3 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 120%;
+  text-align: center;
+}
+.product-items {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/*  */
+.product-item{
+position: relative;
+}
+
+
+/* overlay */
+.product-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease; /* Smooth transition for the hover effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-item:hover .product-overlay {
+  opacity: 1; /* Show the overlay when hovering */
+}
+/* Style the buttons container inside the overlay */
+.overlay-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Style the "Add to cart" button */
+.add-to-cart {
+  background-color: #fff;
+  color: #d4a017; /* Yellowish color for the text */
+  padding: 15px 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #d4a017;
+  color: #fff;
+}
+
+/* Style the action buttons (Share, Compare, Like) */
+.action-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.action-btn {
+  margin-top: 10px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+/* overplay */
+.product-header {
+  height: 300px;
+  position: relative;
+}
+.product-img {
+  height: 100%;
+}
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sales {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--error-color);
+  border-radius: 80px;
+  padding: 10px;
+}
+.sales span {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+}
+.product-body {
+  background-color: var(--secondary-color);
+}
+.product-body-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.name {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 120%;
+}
+.des {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  color: rgb(132, 132, 132);
+}
+.price {
+  display: flex;
+  gap: 10px;
+  align-items: end;
+}
+.price-new {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 150%;
+}
+.price-old {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  color: rgb(132, 132, 132);
+}
